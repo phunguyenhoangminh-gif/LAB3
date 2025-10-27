@@ -97,7 +97,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer(3, 250);
+  setTimer(3, 125);
   setTimer(4, 1000);
   while (1)
   {

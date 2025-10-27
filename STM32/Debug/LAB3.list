@@ -1897,8 +1897,8 @@ void scanLED(void) {
  8000e36:	681b      	ldr	r3, [r3, #0]
  8000e38:	4618      	mov	r0, r3
  8000e3a:	f7ff ff27 	bl	8000c8c <update7SEG>
-        setTimer(3, 250);
- 8000e3e:	21fa      	movs	r1, #250	; 0xfa
+        setTimer(3, 125);
+ 8000e3e:	217d      	movs	r1, #125	; 0x7d
  8000e40:	2003      	movs	r0, #3
  8000e42:	f000 f9cb 	bl	80011dc <setTimer>
         index_led++;
@@ -1966,8 +1966,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer(3, 250);
- 8000e88:	21fa      	movs	r1, #250	; 0xfa
+  setTimer(3, 125);
+ 8000e88:	217d      	movs	r1, #125	; 0x7d
  8000e8a:	2003      	movs	r0, #3
  8000e8c:	f000 f9a6 	bl	80011dc <setTimer>
   setTimer(4, 1000);

@@ -194,7 +194,7 @@ void updateLEDBuffer(int num1, int num2) {
 void scanLED(void) {
     if (isTimerExpired(3) == 1) {
         update7SEG(index_led);
-        setTimer(3, 250);
+        setTimer(3, 125);
         index_led++;
 		if (index_led >= MAX_LED) index_led = 0;
     }
