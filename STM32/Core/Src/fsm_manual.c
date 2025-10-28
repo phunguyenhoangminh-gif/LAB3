@@ -24,16 +24,7 @@ void fsm_manual_run(void) {
             }
 
             if (isButtonPressed(2) == 1) {
-				if (temp_red <= temp_green) {
-					temp_red = temp_green + 1;
-				}
-
-				temp_amber = temp_red - temp_green;
-				if (temp_amber < 1) temp_amber = 1;
-				if (temp_amber > 99) temp_amber = 99;
-
 				time_red = temp_red;
-				time_amber = temp_amber;
 			}
             break;
 
@@ -52,17 +43,7 @@ void fsm_manual_run(void) {
             }
 
             if (isButtonPressed(2) == 1) {
-				if (temp_amber >= temp_red) {
-					temp_amber = temp_red - 1;
-					if (temp_amber < 1) temp_amber = 1;
-				}
-
-				temp_green = temp_red - temp_amber;
-				if (temp_green < 1) temp_green = 1;
-				if (temp_green > 99) temp_green = 99;
-
 				time_amber = temp_amber;
-				time_green = temp_green;
 			}
             break;
 
@@ -81,17 +62,7 @@ void fsm_manual_run(void) {
             }
 
             if (isButtonPressed(2) == 1) {
-				if (temp_green >= temp_red) {
-					temp_green = temp_red - 1;
-					if (temp_green < 1) temp_green = 1;
-				}
-
-				temp_amber = temp_red - temp_green;
-				if (temp_amber < 1) temp_amber = 1;
-				if (temp_amber > 99) temp_amber = 99;
-
 				time_green = temp_green;
-				time_amber = temp_amber;
 			}
             break;
 

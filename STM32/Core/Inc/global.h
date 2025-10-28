@@ -35,4 +35,6 @@ extern int temp_red;
 extern int temp_amber;
 extern int temp_green;
 
+void checkTrafficTime(void);
+
 #endif /* INC_GLOBAL_H_ */

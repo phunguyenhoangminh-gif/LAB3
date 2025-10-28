@@ -109,9 +109,9 @@ int main(void)
 		  if (status == INIT || (status >= AUTO_RED_GREEN && status <= AUTO_AMBER_RED)) {
 			  status = MAN_RED;
 			  turnOffAllLEDs();
-			  temp_red = time_red;
-			  temp_amber = time_amber;
-			  temp_green = time_green;
+			  temp_red = 1;
+			  temp_amber = 1;
+			  temp_green = 1;
 			  setTimer(2, 500);
 			  updateLEDBuffer(2, temp_red);
 		  }
@@ -126,9 +126,10 @@ int main(void)
 			  updateLEDBuffer(4, temp_green);
 		  }
 		  else if (status == MAN_GREEN) {
-			  temp_red = time_red;
-			  temp_amber = time_amber;
-			  temp_green = time_green;
+			  checkTrafficTime();
+			  temp_red = 1;
+			  temp_amber = 1;
+			  temp_green = 1;
 			  status = INIT;
 			  turnOffAllLEDs();
 		  }
