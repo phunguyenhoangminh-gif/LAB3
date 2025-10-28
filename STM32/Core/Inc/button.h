@@ -15,7 +15,7 @@
 #define PRESSED_STATE	RESET
 
 int isButtonPressed (int index);
-//int isButtonLongPressed (int index);
+int isButtonLongPressed (int index);
 
 void getKeyInput();
 

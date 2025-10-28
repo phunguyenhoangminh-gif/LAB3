@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  0002009c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00009468  00000000  00000000  000200c5  2**0
+ 12 .debug_info   000094a4  00000000  00000000  000200c5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00001b53  00000000  00000000  0002952d  2**0
+ 13 .debug_abbrev 00001b71  00000000  00000000  00029569  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000a50  00000000  00000000  0002b080  2**3
+ 14 .debug_aranges 00000a58  00000000  00000000  0002b0e0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000948  00000000  00000000  0002bad0  2**3
+ 15 .debug_ranges 00000950  00000000  00000000  0002bb38  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00016cf0  00000000  00000000  0002c418  2**0
+ 16 .debug_macro  00016cf0  00000000  00000000  0002c488  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000c0e7  00000000  00000000  00043108  2**0
+ 17 .debug_line   0000c10a  00000000  00000000  00043178  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00082416  00000000  00000000  0004f1ef  2**0
+ 18 .debug_str    0008243b  00000000  00000000  0004f282  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000d1605  2**0
+ 19 .comment      00000053  00000000  00000000  000d16bd  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000289c  00000000  00000000  000d1658  2**2
+ 20 .debug_frame  000028c4  00000000  00000000  000d1710  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -80,7 +80,7 @@ Disassembly of section .text:
 int TimeOutForKeyPress[MAX_BUTTON] = {500};
 
 int button_flag[MAX_BUTTON] = {0};
-//int button_long_flag[MAX_BUTTON] = {0};
+int button_long_flag[MAX_BUTTON] = {0};
 
 int isButtonPressed (int index) {
  800014c:	b480      	push	{r7}
@@ -118,7 +118,7 @@ int isButtonPressed (int index) {
 	}
 	return 0;
 }
-*/
+
 void subKeyProcess (int index) {
  8000180:	b480      	push	{r7}
  8000182:	b083      	sub	sp, #12

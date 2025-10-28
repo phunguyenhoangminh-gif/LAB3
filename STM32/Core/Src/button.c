@@ -18,7 +18,7 @@ int KeyReg3[MAX_BUTTON] = {NORMAL_STATE};
 int TimeOutForKeyPress[MAX_BUTTON] = {500};
 
 int button_flag[MAX_BUTTON] = {0};
-//int button_long_flag[MAX_BUTTON] = {0};
+int button_long_flag[MAX_BUTTON] = {0};
 
 int isButtonPressed (int index) {
 	if (button_flag[index] == 1) {
@@ -27,7 +27,7 @@ int isButtonPressed (int index) {
 	}
 	return 0;
 }
-/*
+
 int isButtonLongPressed (int index) {
 	if (button_long_flag[index] == 1) {
 		button_long_flag[index] = 0;
@@ -35,7 +35,7 @@ int isButtonLongPressed (int index) {
 	}
 	return 0;
 }
-*/
+
 void subKeyProcess (int index) {
 	//TODO
 	//HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
